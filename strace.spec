@@ -4,7 +4,7 @@
 #
 Name     : strace
 Version  : 4.10
-Release  : 11
+Release  : 12
 URL      : http://downloads.sourceforge.net/strace/strace-4.10.tar.xz
 Source0  : http://downloads.sourceforge.net/strace/strace-4.10.tar.xz
 Summary  : Tracks and displays system calls associated with a running process
