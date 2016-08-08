@@ -1,3 +1,22 @@
+strace (4.13-1) experimental; urgency=low
+
+  * strace 4.13 snapshot.
+
+ -- Strace <strace-devel@lists.sourceforge.net>  Tue, 26 Jul 2016 16:17:18 +0000
+
+strace (4.12-3) unstable; urgency=medium
+
+  * Fix up 32/64-bit test output in strace -S test to fix i386 build
+  * Run make check with VERBOSE=1 so we get useful information in build logs
+
+ -- Steve McIntyre <93sam@debian.org>  Sat, 04 Jun 2016 02:37:44 +0100
+
+strace (4.12-2) unstable; urgency=medium
+
+  * Remove libunwind dependency. Closes: #826223
+
+ -- Steve McIntyre <93sam@debian.org>  Fri, 03 Jun 2016 13:43:44 +0100
+
 strace (4.12-1) unstable; urgency=low
 
   [ Dmitry V. Levin ]
