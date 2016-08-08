@@ -4,7 +4,7 @@
 #
 Name     : strace
 Version  : 4.13
-Release  : 17
+Release  : 18
 URL      : http://downloads.sourceforge.net/project/strace/strace/4.13/strace-4.13.tar.xz
 Source0  : http://downloads.sourceforge.net/project/strace/strace/4.13/strace-4.13.tar.xz
 Summary  : Tracks and displays system calls associated with a running process
@@ -12,6 +12,8 @@ Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: strace-bin
 Requires: strace-doc
+BuildRequires : btrfs-progs-dev
+BuildRequires : libunwind-dev
 
 %description
 The strace program intercepts and records the system calls called and
