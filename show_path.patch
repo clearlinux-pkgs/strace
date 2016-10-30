@@ -1,0 +1,11 @@
+--- strace-4.13/strace.c~	2016-07-26 16:14:50.000000000 +0000
++++ strace-4.13/strace.c	2016-10-30 01:40:19.794189977 +0000
+@@ -130,7 +130,7 @@
+ bool not_failing_only = 0;
+ 
+ /* Show path associated with fd arguments */
+-unsigned int show_fd_path = 0;
++unsigned int show_fd_path = 2;
+ 
+ static bool detach_on_execve = 0;
+ /* Are we "strace PROG" and need to skip detach on first execve? */
