@@ -4,7 +4,7 @@
 #
 Name     : strace
 Version  : 4.13
-Release  : 19
+Release  : 20
 URL      : http://downloads.sourceforge.net/project/strace/strace/4.13/strace-4.13.tar.xz
 Source0  : http://downloads.sourceforge.net/project/strace/strace/4.13/strace-4.13.tar.xz
 Summary  : Tracks and displays system calls associated with a running process
@@ -14,7 +14,6 @@ Requires: strace-bin
 Requires: strace-doc
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
-Patch1: show_path.patch
 
 %description
 The strace program intercepts and records the system calls called and
@@ -44,7 +43,6 @@ doc components for the strace package.
 
 %prep
 %setup -q -n strace-4.13
-%patch1 -p1
 
 %build
 export LANG=C
