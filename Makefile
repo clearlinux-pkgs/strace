@@ -1,5 +1,5 @@
 PKG_NAME := strace
-URL := http://downloads.sourceforge.net/project/strace/strace/4.13/strace-4.13.tar.xz
-ARCHIVES :=
+URL := http://downloads.sourceforge.net/project/strace/strace/4.16/strace-4.16.tar.xz
+
 
 include ../common/Makefile.common
