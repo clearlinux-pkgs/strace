@@ -1,0 +1,50 @@
+Configure miss: whether gcc handles -Werror -Wunknown-warning-option
+Configure miss: whether gcc handles -Werror -Wunknown-warning-option
+Configure miss: whether to build with code coverage support
+Configure miss: struct stat64
+Configure miss: struct stat64.st_mtime_nsec
+Configure miss: struct pt_all_user_regs
+Configure miss: struct ia64_fpreg
+Configure miss: struct ptrace_peeksiginfo_args
+Configure miss: struct __kernel_flock
+Configure miss: struct __kernel_flock64
+Configure miss: asm/cachectl.h usability
+Configure miss: asm/cachectl.h presence
+Configure miss: asm/cachectl.h
+Configure miss: asm/sysmips.h usability
+Configure miss: asm/sysmips.h presence
+Configure miss: asm/sysmips.h
+Configure miss: bluetooth/bluetooth.h usability
+Configure miss: bluetooth/bluetooth.h presence
+Configure miss: bluetooth/bluetooth.h
+Configure miss: linux/nsfs.h usability
+Configure miss: linux/nsfs.h presence
+Configure miss: linux/nsfs.h
+Configure miss: netinet/sctp.h usability
+Configure miss: netinet/sctp.h presence
+Configure miss: netinet/sctp.h
+Configure miss: sys/conf.h usability
+Configure miss: sys/conf.h presence
+Configure miss: sys/conf.h
+Configure miss: asm/sigcontext.h
+Configure miss: whether union bpf_attr.attach_flags initialization works
+Configure miss: struct statfs.f_fsid.__val
+Configure miss: struct statfs64.f_fsid.__val
+Configure miss: whether BTRFS_COMPRESS_NONE is declared
+Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
+Configure miss: whether BTRFS_COMPRESS_LZO is declared
+Configure miss: whether P_PPID is declared
+Configure miss: whether P_SID is declared
+Configure miss: whether P_CID is declared
+Configure miss: whether P_UID is declared
+Configure miss: whether P_GID is declared
+Configure miss: whether P_LWPID is declared
+Configure miss: whether LO_FLAGS_USE_AOPS is declared
+Configure miss: whether NET_CORE_DESTROY_DELAY is declared
+Configure miss: -m32 runtime support
+Configure miss: gnu/stubs-x32.h usability
+Configure miss: gnu/stubs-x32.h presence
+Configure miss: gnu/stubs-x32.h
+Configure miss: -mx32 runtime support
+Configure miss: struct stat64
+Configure miss: struct stat64.st_mtime_nsec
