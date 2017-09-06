@@ -1,6 +1,7 @@
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether to build with code coverage support
+Configure miss: be64toh
 Configure miss: struct stat64
 Configure miss: struct stat64.st_mtime_nsec
 Configure miss: struct pt_all_user_regs
@@ -8,6 +9,12 @@ Configure miss: struct ia64_fpreg
 Configure miss: struct ptrace_peeksiginfo_args
 Configure miss: struct __kernel_flock
 Configure miss: struct __kernel_flock64
+Configure miss: struct crypto_report_aead
+Configure miss: struct crypto_report_blkcipher
+Configure miss: struct crypto_report_cipher
+Configure miss: struct crypto_report_hash
+Configure miss: struct crypto_report_rng
+Configure miss: struct keyctl_kdf_params
 Configure miss: asm/cachectl.h usability
 Configure miss: asm/cachectl.h presence
 Configure miss: asm/cachectl.h
@@ -17,6 +24,9 @@ Configure miss: asm/sysmips.h
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
 Configure miss: bluetooth/bluetooth.h
+Configure miss: linux/cryptouser.h usability
+Configure miss: linux/cryptouser.h presence
+Configure miss: linux/cryptouser.h
 Configure miss: linux/nsfs.h usability
 Configure miss: linux/nsfs.h presence
 Configure miss: linux/nsfs.h
@@ -28,6 +38,9 @@ Configure miss: sys/conf.h presence
 Configure miss: sys/conf.h
 Configure miss: asm/sigcontext.h
 Configure miss: whether union bpf_attr.attach_flags initialization works
+Configure miss: whether union bpf_attr.inner_map_fd initialization works
+Configure miss: whether union bpf_attr.prog_flags initialization works
+Configure miss: struct fib_rule_uid_range
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
 Configure miss: whether BTRFS_COMPRESS_NONE is declared

@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 4.18
-Release  : 26
-URL      : https://sourceforge.net/projects/strace/files/strace/4.18/strace-4.18.tar.xz
-Source0  : https://sourceforge.net/projects/strace/files/strace/4.18/strace-4.18.tar.xz
-Source99 : https://sourceforge.net/projects/strace/files/strace/4.18/strace-4.18.tar.xz.asc
+Version  : 4.19
+Release  : 27
+URL      : https://sourceforge.net/projects/strace/files/strace/4.19/strace-4.19.tar.xz
+Source0  : https://sourceforge.net/projects/strace/files/strace/4.19/strace-4.19.tar.xz
+Source99 : https://sourceforge.net/projects/strace/files/strace/4.19/strace-4.19.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -47,7 +47,7 @@ doc components for the strace package.
 
 
 %prep
-%setup -q -n strace-4.18
+%setup -q -n strace-4.19
 %patch1 -p1
 
 %build
@@ -55,12 +55,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1499270070
+export SOURCE_DATE_EPOCH=1504706602
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1499270070
+export SOURCE_DATE_EPOCH=1504706602
 rm -rf %{buildroot}
 %make_install
 
