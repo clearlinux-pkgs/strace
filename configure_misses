@@ -14,6 +14,7 @@ Configure miss: struct crypto_report_blkcipher
 Configure miss: struct crypto_report_cipher
 Configure miss: struct crypto_report_hash
 Configure miss: struct crypto_report_rng
+Configure miss: struct kcmp_epoll_slot
 Configure miss: struct keyctl_kdf_params
 Configure miss: asm/cachectl.h usability
 Configure miss: asm/cachectl.h presence
