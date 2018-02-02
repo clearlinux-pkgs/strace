@@ -6,7 +6,7 @@
 #
 Name     : strace
 Version  : 4.20
-Release  : 28
+Release  : 29
 URL      : https://sourceforge.net/projects/strace/files/strace/4.20/strace-4.20.tar.xz
 Source0  : https://sourceforge.net/projects/strace/files/strace/4.20/strace-4.20.tar.xz
 Source99 : https://sourceforge.net/projects/strace/files/strace/4.20/strace-4.20.tar.xz.asc
