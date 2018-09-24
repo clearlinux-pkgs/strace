@@ -6,8 +6,10 @@ Configure miss: struct stat64.st_mtime_nsec
 Configure miss: struct pt_all_user_regs
 Configure miss: struct ia64_fpreg
 Configure miss: struct ptrace_peeksiginfo_args
+Configure miss: s390_compat_regs
 Configure miss: struct __kernel_flock
 Configure miss: struct __kernel_flock64
+Configure miss: struct __kernel_f_owner_ex
 Configure miss: asm/cachectl.h usability
 Configure miss: asm/cachectl.h presence
 Configure miss: asm/cachectl.h
@@ -17,18 +19,49 @@ Configure miss: asm/guarded_storage.h
 Configure miss: asm/sysmips.h usability
 Configure miss: asm/sysmips.h presence
 Configure miss: asm/sysmips.h
-Configure miss: bluetooth/bluetooth.h usability
-Configure miss: bluetooth/bluetooth.h presence
-Configure miss: bluetooth/bluetooth.h
 Configure miss: netinet/sctp.h usability
 Configure miss: netinet/sctp.h presence
 Configure miss: netinet/sctp.h
 Configure miss: sys/conf.h usability
 Configure miss: sys/conf.h presence
 Configure miss: sys/conf.h
+Configure miss: ustat.h usability
+Configure miss: ustat.h presence
+Configure miss: ustat.h
 Configure miss: asm/sigcontext.h
+Configure miss: struct bpf_map_info.ifindex
+Configure miss: struct bpf_map_info.name
+Configure miss: struct bpf_prog_info.created_by_uid
+Configure miss: struct bpf_prog_info.ifindex
+Configure miss: struct bpf_prog_info.load_time
+Configure miss: struct bpf_prog_info.map_ids
+Configure miss: struct bpf_prog_info.name
+Configure miss: struct bpf_prog_info.nr_map_ids
+Configure miss: union bpf_attr.dummy
+Configure miss: union bpf_attr.expected_attach_type
+Configure miss: union bpf_attr.file_flags
+Configure miss: union bpf_attr.map_ifindex
+Configure miss: union bpf_attr.map_name
+Configure miss: union bpf_attr.open_flags
+Configure miss: union bpf_attr.prog_ifindex
+Configure miss: union bpf_attr.prog_name
+Configure miss: union bpf_attr.query.attach_flags
+Configure miss: union bpf_attr.query.attach_type
+Configure miss: union bpf_attr.query.prog_cnt
+Configure miss: union bpf_attr.query.prog_ids
+Configure miss: union bpf_attr.query.query_flags
+Configure miss: union bpf_attr.query.target_fd
+Configure miss: union bpf_attr.raw_tracepoint.name
+Configure miss: union bpf_attr.raw_tracepoint.prog_fd
+Configure miss: bluetooth/bluetooth.h usability
+Configure miss: bluetooth/bluetooth.h presence
+Configure miss: bluetooth/bluetooth.h
+Configure miss: struct fib_rule_port_range
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
+Configure miss: whether <linux/signal.h> can be used along with <signal.h>
+Configure miss: struct __aio_sigset
+Configure miss: struct btrfs_ioctl_logical_ino_args.flags
 Configure miss: whether BTRFS_COMPRESS_NONE is declared
 Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
 Configure miss: whether BTRFS_COMPRESS_LZO is declared
@@ -47,7 +80,7 @@ Configure miss: demangle.h
 Configure miss: libiberty/demangle.h usability
 Configure miss: libiberty/demangle.h presence
 Configure miss: libiberty/demangle.h
-Configure miss: whether to enable demangling symbols in stack trace
+Configure miss: whether to enable symbols demangling in stack trace
 Configure miss: m32 personality runtime support
 Configure miss: gnu/stubs-x32.h usability
 Configure miss: gnu/stubs-x32.h presence
