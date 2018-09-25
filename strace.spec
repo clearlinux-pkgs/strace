@@ -6,17 +6,17 @@
 #
 Name     : strace
 Version  : 4.24
-Release  : 32
+Release  : 33
 URL      : https://github.com/strace/strace/releases/download/v4.24/strace-4.24.tar.xz
 Source0  : https://github.com/strace/strace/releases/download/v4.24/strace-4.24.tar.xz
 Source99 : https://github.com/strace/strace/releases/download/v4.24/strace-4.24.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
 License  : BSD-3-Clause
-Requires: strace-bin
-Requires: strace-man
-Requires: strace-license
-Requires: strace-data
+Requires: strace-bin = %{version}-%{release}
+Requires: strace-man = %{version}-%{release}
+Requires: strace-license = %{version}-%{release}
+Requires: strace-data = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
 BuildRequires : valgrind
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537827271
+export SOURCE_DATE_EPOCH=1537911580
 %configure --disable-static --with-libunwind
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1537827271
+export SOURCE_DATE_EPOCH=1537911580
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
 cp COPYING %{buildroot}/usr/share/package-licenses/strace/COPYING
