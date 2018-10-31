@@ -1,5 +1,7 @@
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
+Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
+Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: be64toh
 Configure miss: struct stat64
 Configure miss: struct stat64.st_mtime_nsec

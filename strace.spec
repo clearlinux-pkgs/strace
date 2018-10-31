@@ -5,18 +5,17 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 4.24
-Release  : 33
-URL      : https://github.com/strace/strace/releases/download/v4.24/strace-4.24.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v4.24/strace-4.24.tar.xz
-Source99 : https://github.com/strace/strace/releases/download/v4.24/strace-4.24.tar.xz.asc
+Version  : 4.25
+Release  : 34
+URL      : https://github.com/strace/strace/releases/download/v4.25/strace-4.25.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v4.25/strace-4.25.tar.xz
+Source99 : https://github.com/strace/strace/releases/download/v4.25/strace-4.25.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: strace-bin = %{version}-%{release}
-Requires: strace-man = %{version}-%{release}
 Requires: strace-license = %{version}-%{release}
-Requires: strace-data = %{version}-%{release}
+Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
 BuildRequires : valgrind
@@ -35,20 +34,11 @@ received by a process.
 %package bin
 Summary: bin components for the strace package.
 Group: Binaries
-Requires: strace-data = %{version}-%{release}
 Requires: strace-license = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 
 %description bin
 bin components for the strace package.
-
-
-%package data
-Summary: data components for the strace package.
-Group: Data
-
-%description data
-data components for the strace package.
 
 
 %package license
@@ -68,7 +58,7 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-4.24
+%setup -q -n strace-4.25
 %patch1 -p1
 
 %build
@@ -76,12 +66,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537911580
+export SOURCE_DATE_EPOCH=1540999381
 %configure --disable-static --with-libunwind
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1537911580
+export SOURCE_DATE_EPOCH=1540999381
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
 cp COPYING %{buildroot}/usr/share/package-licenses/strace/COPYING
@@ -97,15 +87,12 @@ cp debian/copyright %{buildroot}/usr/share/package-licenses/strace/debian_copyri
 /usr/bin/strace-graph
 /usr/bin/strace-log-merge
 
-%files data
-%defattr(-,root,root,-)
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/strace/COPYING
 /usr/share/package-licenses/strace/debian_copyright
 
-%files license
-%defattr(-,root,root,-)
-/usr/share/package-licenses/strace/COPYING
-
 %files man
-%defattr(-,root,root,-)
+%defattr(0644,root,root,0755)
 /usr/share/man/man1/strace-log-merge.1
 /usr/share/man/man1/strace.1
