@@ -5,16 +5,15 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 4.25
-Release  : 34
-URL      : https://github.com/strace/strace/releases/download/v4.25/strace-4.25.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v4.25/strace-4.25.tar.xz
-Source99 : https://github.com/strace/strace/releases/download/v4.25/strace-4.25.tar.xz.asc
+Version  : 4.26
+Release  : 35
+URL      : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz
+Source99 : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
-License  : BSD-3-Clause
+License  : GPL-2.0+ LGPL-2.1+
 Requires: strace-bin = %{version}-%{release}
-Requires: strace-license = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
@@ -34,19 +33,10 @@ received by a process.
 %package bin
 Summary: bin components for the strace package.
 Group: Binaries
-Requires: strace-license = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 
 %description bin
 bin components for the strace package.
-
-
-%package license
-Summary: license components for the strace package.
-Group: Default
-
-%description license
-license components for the strace package.
 
 
 %package man
@@ -58,7 +48,7 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-4.25
+%setup -q -n strace-4.26
 %patch1 -p1
 
 %build
@@ -66,16 +56,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1540999381
+export SOURCE_DATE_EPOCH=1545922645
 %configure --disable-static --with-libunwind
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1540999381
+export SOURCE_DATE_EPOCH=1545922645
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/strace
-cp COPYING %{buildroot}/usr/share/package-licenses/strace/COPYING
-cp debian/copyright %{buildroot}/usr/share/package-licenses/strace/debian_copyright
 %make_install
 
 %files
@@ -86,11 +73,6 @@ cp debian/copyright %{buildroot}/usr/share/package-licenses/strace/debian_copyri
 /usr/bin/strace
 /usr/bin/strace-graph
 /usr/bin/strace-log-merge
-
-%files license
-%defattr(0644,root,root,0755)
-/usr/share/package-licenses/strace/COPYING
-/usr/share/package-licenses/strace/debian_copyright
 
 %files man
 %defattr(0644,root,root,0755)

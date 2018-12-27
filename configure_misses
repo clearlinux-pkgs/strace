@@ -31,39 +31,15 @@ Configure miss: ustat.h usability
 Configure miss: ustat.h presence
 Configure miss: ustat.h
 Configure miss: asm/sigcontext.h
-Configure miss: struct bpf_map_info.ifindex
-Configure miss: struct bpf_map_info.name
-Configure miss: struct bpf_prog_info.created_by_uid
-Configure miss: struct bpf_prog_info.ifindex
-Configure miss: struct bpf_prog_info.load_time
-Configure miss: struct bpf_prog_info.map_ids
-Configure miss: struct bpf_prog_info.name
-Configure miss: struct bpf_prog_info.nr_map_ids
+Configure miss: linux/netfilter_bridge/ebtables.h
 Configure miss: union bpf_attr.dummy
-Configure miss: union bpf_attr.expected_attach_type
-Configure miss: union bpf_attr.file_flags
-Configure miss: union bpf_attr.map_ifindex
-Configure miss: union bpf_attr.map_name
-Configure miss: union bpf_attr.open_flags
-Configure miss: union bpf_attr.prog_ifindex
-Configure miss: union bpf_attr.prog_name
-Configure miss: union bpf_attr.query.attach_flags
-Configure miss: union bpf_attr.query.attach_type
-Configure miss: union bpf_attr.query.prog_cnt
-Configure miss: union bpf_attr.query.prog_ids
-Configure miss: union bpf_attr.query.query_flags
-Configure miss: union bpf_attr.query.target_fd
-Configure miss: union bpf_attr.raw_tracepoint.name
-Configure miss: union bpf_attr.raw_tracepoint.prog_fd
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
 Configure miss: bluetooth/bluetooth.h
-Configure miss: struct fib_rule_port_range
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
 Configure miss: struct __aio_sigset
-Configure miss: struct btrfs_ioctl_logical_ino_args.flags
 Configure miss: whether BTRFS_COMPRESS_NONE is declared
 Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
 Configure miss: whether BTRFS_COMPRESS_LZO is declared
