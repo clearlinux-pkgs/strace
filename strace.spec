@@ -6,13 +6,13 @@
 #
 Name     : strace
 Version  : 4.26
-Release  : 35
+Release  : 36
 URL      : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz
 Source0  : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz
 Source99 : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz.asc
-Summary  : Tracks and displays system calls associated with a running process
+Summary  : A diagnostic, debugging and instructional userspace tracer
 Group    : Development/Tools
-License  : GPL-2.0+ LGPL-2.1+
+License  : GPL-2.0-or-later LGPL-2.1-or-later
 Requires: strace-bin = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
@@ -39,6 +39,14 @@ Requires: strace-man = %{version}-%{release}
 bin components for the strace package.
 
 
+%package extras
+Summary: extras components for the strace package.
+Group: Default
+
+%description extras
+extras components for the strace package.
+
+
 %package man
 Summary: man components for the strace package.
 Group: Default
@@ -56,12 +64,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545922645
+export SOURCE_DATE_EPOCH=1550462840
 %configure --disable-static --with-libunwind
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1545922645
+export SOURCE_DATE_EPOCH=1550462840
 rm -rf %{buildroot}
 %make_install
 
@@ -70,7 +78,12 @@ rm -rf %{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
+%exclude /usr/bin/strace-graph
+%exclude /usr/bin/strace-log-merge
 /usr/bin/strace
+
+%files extras
+%defattr(-,root,root,-)
 /usr/bin/strace-graph
 /usr/bin/strace-log-merge
 
