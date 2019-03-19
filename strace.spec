@@ -5,14 +5,14 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 4.26
-Release  : 36
-URL      : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz
-Source99 : https://github.com/strace/strace/releases/download/v4.26/strace-4.26.tar.xz.asc
+Version  : 5.0
+Release  : 37
+URL      : https://github.com/strace/strace/releases/download/v5.0/strace-5.0.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.0/strace-5.0.tar.xz
+Source99 : https://github.com/strace/strace/releases/download/v5.0/strace-5.0.tar.xz.asc
 Summary  : A diagnostic, debugging and instructional userspace tracer
 Group    : Development/Tools
-License  : GPL-2.0-or-later LGPL-2.1-or-later
+License  : GPL-2.0+ LGPL-2.1+
 Requires: strace-bin = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
@@ -33,7 +33,6 @@ received by a process.
 %package bin
 Summary: bin components for the strace package.
 Group: Binaries
-Requires: strace-man = %{version}-%{release}
 
 %description bin
 bin components for the strace package.
@@ -56,7 +55,7 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-4.26
+%setup -q -n strace-5.0
 %patch1 -p1
 
 %build
@@ -64,12 +63,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550462840
+export SOURCE_DATE_EPOCH=1553004220
+export LDFLAGS="${LDFLAGS} -fno-lto"
 %configure --disable-static --with-libunwind
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1550462840
+export SOURCE_DATE_EPOCH=1553004220
 rm -rf %{buildroot}
 %make_install
 

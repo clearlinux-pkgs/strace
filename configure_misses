@@ -32,7 +32,26 @@ Configure miss: ustat.h presence
 Configure miss: ustat.h
 Configure miss: asm/sigcontext.h
 Configure miss: linux/netfilter_bridge/ebtables.h
+Configure miss: struct bpf_prog_info.btf_id
+Configure miss: struct bpf_prog_info.func_info
+Configure miss: struct bpf_prog_info.func_info_rec_size
+Configure miss: struct bpf_prog_info.jited_line_info
+Configure miss: struct bpf_prog_info.jited_line_info_rec_size
+Configure miss: struct bpf_prog_info.line_info
+Configure miss: struct bpf_prog_info.line_info_rec_size
+Configure miss: struct bpf_prog_info.nr_func_info
+Configure miss: struct bpf_prog_info.nr_jited_line_info
+Configure miss: struct bpf_prog_info.nr_line_info
+Configure miss: struct bpf_prog_info.nr_prog_tags
+Configure miss: struct bpf_prog_info.prog_tags
 Configure miss: union bpf_attr.dummy
+Configure miss: union bpf_attr.func_info
+Configure miss: union bpf_attr.func_info_cnt
+Configure miss: union bpf_attr.func_info_rec_size
+Configure miss: union bpf_attr.line_info
+Configure miss: union bpf_attr.line_info_cnt
+Configure miss: union bpf_attr.line_info_rec_size
+Configure miss: union bpf_attr.prog_btf_fd
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
 Configure miss: bluetooth/bluetooth.h
@@ -50,6 +69,7 @@ Configure miss: whether P_UID is declared
 Configure miss: whether P_GID is declared
 Configure miss: whether P_LWPID is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
+Configure miss: whether KERN_PANIC_PRINT is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: demangle.h usability
