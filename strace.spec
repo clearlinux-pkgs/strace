@@ -5,15 +5,16 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 5.0
-Release  : 37
-URL      : https://github.com/strace/strace/releases/download/v5.0/strace-5.0.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v5.0/strace-5.0.tar.xz
-Source99 : https://github.com/strace/strace/releases/download/v5.0/strace-5.0.tar.xz.asc
+Version  : 5.1
+Release  : 38
+URL      : https://github.com/strace/strace/releases/download/v5.1/strace-5.1.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.1/strace-5.1.tar.xz
+Source99 : https://github.com/strace/strace/releases/download/v5.1/strace-5.1.tar.xz.asc
 Summary  : A diagnostic, debugging and instructional userspace tracer
 Group    : Development/Tools
-License  : GPL-2.0+ LGPL-2.1+
+License  : GPL-2.0+ LGPL-2.1 LGPL-2.1+
 Requires: strace-bin = %{version}-%{release}
+Requires: strace-license = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
@@ -33,6 +34,7 @@ received by a process.
 %package bin
 Summary: bin components for the strace package.
 Group: Binaries
+Requires: strace-license = %{version}-%{release}
 
 %description bin
 bin components for the strace package.
@@ -46,6 +48,14 @@ Group: Default
 extras components for the strace package.
 
 
+%package license
+Summary: license components for the strace package.
+Group: Default
+
+%description license
+license components for the strace package.
+
+
 %package man
 Summary: man components for the strace package.
 Group: Default
@@ -55,7 +65,7 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-5.0
+%setup -q -n strace-5.1
 %patch1 -p1
 
 %build
@@ -63,14 +73,22 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1553004220
-export LDFLAGS="${LDFLAGS} -fno-lto"
+export SOURCE_DATE_EPOCH=1558648385
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static --with-libunwind
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1553004220
+export SOURCE_DATE_EPOCH=1558648385
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/strace
+cp COPYING %{buildroot}/usr/share/package-licenses/strace/COPYING
 %make_install
 
 %files
@@ -86,6 +104,10 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 /usr/bin/strace-graph
 /usr/bin/strace-log-merge
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/strace/COPYING
 
 %files man
 %defattr(0644,root,root,0755)

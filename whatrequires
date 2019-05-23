@@ -1,2 +1,5 @@
 # This file contains recursive sources that require this package
+compat-ldc-soname84
 filesystem
+ldc
+spice
