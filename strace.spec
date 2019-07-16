@@ -5,14 +5,14 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 5.1
-Release  : 38
-URL      : https://github.com/strace/strace/releases/download/v5.1/strace-5.1.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v5.1/strace-5.1.tar.xz
-Source99 : https://github.com/strace/strace/releases/download/v5.1/strace-5.1.tar.xz.asc
+Version  : 5.2
+Release  : 39
+URL      : https://github.com/strace/strace/releases/download/v5.2/strace-5.2.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.2/strace-5.2.tar.xz
+Source99 : https://github.com/strace/strace/releases/download/v5.2/strace-5.2.tar.xz.asc
 Summary  : A diagnostic, debugging and instructional userspace tracer
 Group    : Development/Tools
-License  : GPL-2.0+ LGPL-2.1 LGPL-2.1+
+License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
 Requires: strace-bin = %{version}-%{release}
 Requires: strace-license = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
@@ -65,15 +65,16 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-5.1
+%setup -q -n strace-5.2
 %patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1558648385
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1563250371
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -85,10 +86,13 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1558648385
+export SOURCE_DATE_EPOCH=1563250371
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
 cp COPYING %{buildroot}/usr/share/package-licenses/strace/COPYING
+cp tests-m32/COPYING %{buildroot}/usr/share/package-licenses/strace/tests-m32_COPYING
+cp tests-mx32/COPYING %{buildroot}/usr/share/package-licenses/strace/tests-mx32_COPYING
+cp tests/COPYING %{buildroot}/usr/share/package-licenses/strace/tests_COPYING
 %make_install
 
 %files
@@ -108,6 +112,9 @@ cp COPYING %{buildroot}/usr/share/package-licenses/strace/COPYING
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/strace/COPYING
+/usr/share/package-licenses/strace/tests-m32_COPYING
+/usr/share/package-licenses/strace/tests-mx32_COPYING
+/usr/share/package-licenses/strace/tests_COPYING
 
 %files man
 %defattr(0644,root,root,0755)

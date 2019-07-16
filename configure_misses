@@ -26,6 +26,9 @@ Configure miss: asm/sysmips.h
 Configure miss: linux/io_uring.h usability
 Configure miss: linux/io_uring.h presence
 Configure miss: linux/io_uring.h
+Configure miss: linux/mount.h usability
+Configure miss: linux/mount.h presence
+Configure miss: linux/mount.h
 Configure miss: netinet/sctp.h usability
 Configure miss: netinet/sctp.h presence
 Configure miss: netinet/sctp.h
@@ -36,7 +39,6 @@ Configure miss: ustat.h usability
 Configure miss: ustat.h presence
 Configure miss: ustat.h
 Configure miss: asm/sigcontext.h
-Configure miss: linux/netfilter_bridge/ebtables.h
 Configure miss: struct bpf_prog_info.btf_id
 Configure miss: struct bpf_prog_info.func_info
 Configure miss: struct bpf_prog_info.func_info_rec_size
@@ -59,6 +61,10 @@ Configure miss: union bpf_attr.line_info
 Configure miss: union bpf_attr.line_info_cnt
 Configure miss: union bpf_attr.line_info_rec_size
 Configure miss: union bpf_attr.prog_btf_fd
+Configure miss: union bpf_attr.test.ctx_in
+Configure miss: union bpf_attr.test.ctx_out
+Configure miss: union bpf_attr.test.ctx_size_in
+Configure miss: union bpf_attr.test.ctx_size_out
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
 Configure miss: bluetooth/bluetooth.h
