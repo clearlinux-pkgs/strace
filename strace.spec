@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 5.2
-Release  : 39
-URL      : https://github.com/strace/strace/releases/download/v5.2/strace-5.2.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v5.2/strace-5.2.tar.xz
-Source99 : https://github.com/strace/strace/releases/download/v5.2/strace-5.2.tar.xz.asc
+Version  : 5.3
+Release  : 40
+URL      : https://github.com/strace/strace/releases/download/v5.3/strace-5.3.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.3/strace-5.3.tar.xz
+Source1 : https://github.com/strace/strace/releases/download/v5.3/strace-5.3.tar.xz.asc
 Summary  : A diagnostic, debugging and instructional userspace tracer
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
@@ -65,7 +65,7 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-5.2
+%setup -q -n strace-5.3
 %patch1 -p1
 
 %build
@@ -73,7 +73,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563250371
+export SOURCE_DATE_EPOCH=1569616896
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +87,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1563250371
+export SOURCE_DATE_EPOCH=1569616896
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
 cp COPYING %{buildroot}/usr/share/package-licenses/strace/COPYING
@@ -100,8 +101,6 @@ cp tests/COPYING %{buildroot}/usr/share/package-licenses/strace/tests_COPYING
 
 %files bin
 %defattr(-,root,root,-)
-%exclude /usr/bin/strace-graph
-%exclude /usr/bin/strace-log-merge
 /usr/bin/strace
 
 %files extras

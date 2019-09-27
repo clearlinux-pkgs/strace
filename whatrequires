@@ -1,5 +1,7 @@
 # This file contains recursive sources that require this package
-compat-ldc-soname84
+Linux-PAM
 filesystem
 ldc
+mingw-crt
+mingw-gcc
 spice

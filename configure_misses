@@ -32,6 +32,9 @@ Configure miss: linux/mount.h
 Configure miss: netinet/sctp.h usability
 Configure miss: netinet/sctp.h presence
 Configure miss: netinet/sctp.h
+Configure miss: stropts.h usability
+Configure miss: stropts.h presence
+Configure miss: stropts.h
 Configure miss: sys/conf.h usability
 Configure miss: sys/conf.h presence
 Configure miss: sys/conf.h
@@ -72,6 +75,7 @@ Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
 Configure miss: struct __aio_sigset
+Configure miss: struct clone_args
 Configure miss: whether BTRFS_COMPRESS_NONE is declared
 Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
 Configure miss: whether BTRFS_COMPRESS_LZO is declared
