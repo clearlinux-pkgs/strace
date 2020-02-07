@@ -5,16 +5,15 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 5.4
-Release  : 41
-URL      : https://github.com/strace/strace/releases/download/v5.4/strace-5.4.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v5.4/strace-5.4.tar.xz
-Source1 : https://github.com/strace/strace/releases/download/v5.4/strace-5.4.tar.xz.asc
+Version  : 5.5
+Release  : 42
+URL      : https://github.com/strace/strace/releases/download/v5.5/strace-5.5.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.5/strace-5.5.tar.xz
+Source1  : https://github.com/strace/strace/releases/download/v5.5/strace-5.5.tar.xz.asc
 Summary  : A diagnostic, debugging and instructional userspace tracer
 Group    : Development/Tools
-License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
+License  : GPL-2.0+ LGPL-2.1+
 Requires: strace-bin = %{version}-%{release}
-Requires: strace-license = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
@@ -34,7 +33,6 @@ received by a process.
 %package bin
 Summary: bin components for the strace package.
 Group: Binaries
-Requires: strace-license = %{version}-%{release}
 
 %description bin
 bin components for the strace package.
@@ -48,14 +46,6 @@ Group: Default
 extras components for the strace package.
 
 
-%package license
-Summary: license components for the strace package.
-Group: Default
-
-%description license
-license components for the strace package.
-
-
 %package man
 Summary: man components for the strace package.
 Group: Default
@@ -65,8 +55,8 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-5.4
-cd %{_builddir}/strace-5.4
+%setup -q -n strace-5.5
+cd %{_builddir}/strace-5.5
 %patch1 -p1
 
 %build
@@ -74,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575398782
+export SOURCE_DATE_EPOCH=1581054105
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -88,13 +78,8 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1575398782
+export SOURCE_DATE_EPOCH=1581054105
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/strace
-cp %{_builddir}/strace-5.4/COPYING %{buildroot}/usr/share/package-licenses/strace/840c8a159a9a721c40c7d3433e7dc20042b96af3
-cp %{_builddir}/strace-5.4/tests-m32/COPYING %{buildroot}/usr/share/package-licenses/strace/4d5d208842c6156a913b707572f3391857859e78
-cp %{_builddir}/strace-5.4/tests-mx32/COPYING %{buildroot}/usr/share/package-licenses/strace/4d5d208842c6156a913b707572f3391857859e78
-cp %{_builddir}/strace-5.4/tests/COPYING %{buildroot}/usr/share/package-licenses/strace/4d5d208842c6156a913b707572f3391857859e78
 %make_install
 
 %files
@@ -108,11 +93,6 @@ cp %{_builddir}/strace-5.4/tests/COPYING %{buildroot}/usr/share/package-licenses
 %defattr(-,root,root,-)
 /usr/bin/strace-graph
 /usr/bin/strace-log-merge
-
-%files license
-%defattr(0644,root,root,0755)
-/usr/share/package-licenses/strace/4d5d208842c6156a913b707572f3391857859e78
-/usr/share/package-licenses/strace/840c8a159a9a721c40c7d3433e7dc20042b96af3
 
 %files man
 %defattr(0644,root,root,0755)
