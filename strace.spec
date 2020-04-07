@@ -5,20 +5,20 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 5.5
-Release  : 42
-URL      : https://github.com/strace/strace/releases/download/v5.5/strace-5.5.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v5.5/strace-5.5.tar.xz
-Source1  : https://github.com/strace/strace/releases/download/v5.5/strace-5.5.tar.xz.asc
-Summary  : A diagnostic, debugging and instructional userspace tracer
+Version  : 5.6
+Release  : 43
+URL      : https://github.com/strace/strace/releases/download/v5.6/strace-5.6.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.6/strace-5.6.tar.xz
+Source1  : https://github.com/strace/strace/releases/download/v5.6/strace-5.6.tar.xz.asc
+Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
-License  : GPL-2.0+ LGPL-2.1+
+License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
 Requires: strace-bin = %{version}-%{release}
+Requires: strace-license = %{version}-%{release}
 Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
 BuildRequires : valgrind
-Patch1: show_path.patch
 
 %description
 The strace program intercepts and records the system calls called and
@@ -33,6 +33,7 @@ received by a process.
 %package bin
 Summary: bin components for the strace package.
 Group: Binaries
+Requires: strace-license = %{version}-%{release}
 
 %description bin
 bin components for the strace package.
@@ -46,6 +47,14 @@ Group: Default
 extras components for the strace package.
 
 
+%package license
+Summary: license components for the strace package.
+Group: Default
+
+%description license
+license components for the strace package.
+
+
 %package man
 Summary: man components for the strace package.
 Group: Default
@@ -55,31 +64,35 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-5.5
-cd %{_builddir}/strace-5.5
-%patch1 -p1
+%setup -q -n strace-5.6
+cd %{_builddir}/strace-5.6
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581054105
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1586296542
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static --with-libunwind
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1581054105
+export SOURCE_DATE_EPOCH=1586296542
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/strace
+cp %{_builddir}/strace-5.6/COPYING %{buildroot}/usr/share/package-licenses/strace/4dfefcdcb9bea47afec0beffdc221902494e8607
+cp %{_builddir}/strace-5.6/debian/copyright %{buildroot}/usr/share/package-licenses/strace/a0d1b06ef14d61d7fad64266c547e0095e6e81de
+cp %{_builddir}/strace-5.6/tests-m32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
+cp %{_builddir}/strace-5.6/tests-mx32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
+cp %{_builddir}/strace-5.6/tests/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
 %make_install
 
 %files
@@ -93,6 +106,12 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 /usr/bin/strace-graph
 /usr/bin/strace-log-merge
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
+/usr/share/package-licenses/strace/4dfefcdcb9bea47afec0beffdc221902494e8607
+/usr/share/package-licenses/strace/a0d1b06ef14d61d7fad64266c547e0095e6e81de
 
 %files man
 %defattr(0644,root,root,0755)

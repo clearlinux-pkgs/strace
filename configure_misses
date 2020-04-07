@@ -3,21 +3,15 @@ Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: be64toh
-Configure miss: struct __kernel_timespec
-Configure miss: struct __kernel_sock_timeval
 Configure miss: struct stat64
 Configure miss: struct stat64.st_mtime_nsec
 Configure miss: struct pt_all_user_regs
 Configure miss: struct ia64_fpreg
 Configure miss: struct ptrace_peeksiginfo_args
-Configure miss: struct __ptrace_syscall_info
-Configure miss: struct ptrace_syscall_info
 Configure miss: s390_compat_regs
 Configure miss: struct __kernel_flock
 Configure miss: struct __kernel_flock64
 Configure miss: struct __kernel_f_owner_ex
-Configure miss: struct keyctl_pkey_params
-Configure miss: struct keyctl_pkey_query
 Configure miss: struct perf_event_attr.aux_sample_size
 Configure miss: asm/cachectl.h usability
 Configure miss: asm/cachectl.h presence
@@ -28,9 +22,9 @@ Configure miss: asm/guarded_storage.h
 Configure miss: asm/sysmips.h usability
 Configure miss: asm/sysmips.h presence
 Configure miss: asm/sysmips.h
-Configure miss: linux/mount.h usability
-Configure miss: linux/mount.h presence
-Configure miss: linux/mount.h
+Configure miss: linux/openat2.h usability
+Configure miss: linux/openat2.h presence
+Configure miss: linux/openat2.h
 Configure miss: netinet/sctp.h usability
 Configure miss: netinet/sctp.h presence
 Configure miss: netinet/sctp.h
@@ -44,41 +38,28 @@ Configure miss: ustat.h usability
 Configure miss: ustat.h presence
 Configure miss: ustat.h
 Configure miss: asm/sigcontext.h
-Configure miss: struct bpf_prog_info.btf_id
-Configure miss: struct bpf_prog_info.func_info
-Configure miss: struct bpf_prog_info.func_info_rec_size
-Configure miss: struct bpf_prog_info.jited_line_info
-Configure miss: struct bpf_prog_info.jited_line_info_rec_size
-Configure miss: struct bpf_prog_info.line_info
-Configure miss: struct bpf_prog_info.line_info_rec_size
-Configure miss: struct bpf_prog_info.nr_func_info
-Configure miss: struct bpf_prog_info.nr_jited_line_info
-Configure miss: struct bpf_prog_info.nr_line_info
-Configure miss: struct bpf_prog_info.nr_prog_tags
-Configure miss: struct bpf_prog_info.prog_tags
-Configure miss: struct bpf_prog_info.run_cnt
-Configure miss: struct bpf_prog_info.run_time_ns
+Configure miss: struct bpf_map_info.btf_vmlinux_value_type_id
 Configure miss: union bpf_attr.attach_btf_id
 Configure miss: union bpf_attr.attach_prog_fd
+Configure miss: union bpf_attr.batch.count
+Configure miss: union bpf_attr.batch.elem_flags
+Configure miss: union bpf_attr.batch.flags
+Configure miss: union bpf_attr.batch.in_batch
+Configure miss: union bpf_attr.batch.keys
+Configure miss: union bpf_attr.batch.map_fd
+Configure miss: union bpf_attr.batch.out_batch
+Configure miss: union bpf_attr.batch.values
+Configure miss: union bpf_attr.btf_vmlinux_value_type_id
 Configure miss: union bpf_attr.dummy
-Configure miss: union bpf_attr.func_info
-Configure miss: union bpf_attr.func_info_cnt
-Configure miss: union bpf_attr.func_info_rec_size
-Configure miss: union bpf_attr.line_info
-Configure miss: union bpf_attr.line_info_cnt
-Configure miss: union bpf_attr.line_info_rec_size
-Configure miss: union bpf_attr.prog_btf_fd
-Configure miss: union bpf_attr.test.ctx_in
-Configure miss: union bpf_attr.test.ctx_out
-Configure miss: union bpf_attr.test.ctx_size_in
-Configure miss: union bpf_attr.test.ctx_size_out
-Configure miss: linux/io_uring.h usability
-Configure miss: linux/io_uring.h presence
-Configure miss: linux/io_uring.h
+Configure miss: union bpf_attr.replace_bpf_fd
+Configure miss: struct io_uring_params.wq_fd
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
 Configure miss: bluetooth/bluetooth.h
 Configure miss: whether TCA_ACT_FLAGS is declared
+Configure miss: whether IFLA_PROP_LIST is declared
+Configure miss: whether IFLA_ALT_IFNAME is declared
+Configure miss: whether IFLA_PERM_ADDRESS is declared
 Configure miss: whether TCA_STATS_PKT64 is declared
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
@@ -88,6 +69,10 @@ Configure miss: struct clone_args.set_tid_size
 Configure miss: whether BTRFS_COMPRESS_NONE is declared
 Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
 Configure miss: whether BTRFS_COMPRESS_LZO is declared
+Configure miss: struct io_uring_files_update
+Configure miss: struct io_uring_probe_op
+Configure miss: struct io_uring_probe
+Configure miss: struct v4l2_area
 Configure miss: whether P_PPID is declared
 Configure miss: whether P_SID is declared
 Configure miss: whether P_CID is declared
@@ -95,7 +80,6 @@ Configure miss: whether P_UID is declared
 Configure miss: whether P_GID is declared
 Configure miss: whether P_LWPID is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
-Configure miss: whether KERN_PANIC_PRINT is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
 Configure miss: whether V4L2_CTRL_TYPE_AREA is declared
 Configure miss: x86_64-generic-linux-gnu-readelf
