@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 5.6
-Release  : 43
-URL      : https://github.com/strace/strace/releases/download/v5.6/strace-5.6.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v5.6/strace-5.6.tar.xz
-Source1  : https://github.com/strace/strace/releases/download/v5.6/strace-5.6.tar.xz.asc
+Version  : 5.7
+Release  : 44
+URL      : https://github.com/strace/strace/releases/download/v5.7/strace-5.7.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.7/strace-5.7.tar.xz
+Source1  : https://github.com/strace/strace/releases/download/v5.7/strace-5.7.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
@@ -64,15 +64,15 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-5.6
-cd %{_builddir}/strace-5.6
+%setup -q -n strace-5.7
+cd %{_builddir}/strace-5.7
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1586296542
+export SOURCE_DATE_EPOCH=1591758517
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -85,14 +85,14 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1586296542
+export SOURCE_DATE_EPOCH=1591758517
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
-cp %{_builddir}/strace-5.6/COPYING %{buildroot}/usr/share/package-licenses/strace/4dfefcdcb9bea47afec0beffdc221902494e8607
-cp %{_builddir}/strace-5.6/debian/copyright %{buildroot}/usr/share/package-licenses/strace/a0d1b06ef14d61d7fad64266c547e0095e6e81de
-cp %{_builddir}/strace-5.6/tests-m32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
-cp %{_builddir}/strace-5.6/tests-mx32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
-cp %{_builddir}/strace-5.6/tests/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
+cp %{_builddir}/strace-5.7/COPYING %{buildroot}/usr/share/package-licenses/strace/4dfefcdcb9bea47afec0beffdc221902494e8607
+cp %{_builddir}/strace-5.7/debian/copyright %{buildroot}/usr/share/package-licenses/strace/a0d1b06ef14d61d7fad64266c547e0095e6e81de
+cp %{_builddir}/strace-5.7/tests-m32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
+cp %{_builddir}/strace-5.7/tests-mx32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
+cp %{_builddir}/strace-5.7/tests/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
 %make_install
 
 %files

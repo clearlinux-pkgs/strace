@@ -22,21 +22,13 @@ Configure miss: asm/guarded_storage.h
 Configure miss: asm/sysmips.h usability
 Configure miss: asm/sysmips.h presence
 Configure miss: asm/sysmips.h
-Configure miss: linux/openat2.h usability
-Configure miss: linux/openat2.h presence
-Configure miss: linux/openat2.h
 Configure miss: netinet/sctp.h usability
 Configure miss: netinet/sctp.h presence
 Configure miss: netinet/sctp.h
-Configure miss: stropts.h usability
-Configure miss: stropts.h presence
-Configure miss: stropts.h
-Configure miss: sys/conf.h usability
-Configure miss: sys/conf.h presence
-Configure miss: sys/conf.h
 Configure miss: ustat.h usability
 Configure miss: ustat.h presence
 Configure miss: ustat.h
+Configure miss: linux/openat2.h
 Configure miss: asm/sigcontext.h
 Configure miss: struct bpf_map_info.btf_vmlinux_value_type_id
 Configure miss: union bpf_attr.attach_btf_id
@@ -51,37 +43,44 @@ Configure miss: union bpf_attr.batch.out_batch
 Configure miss: union bpf_attr.batch.values
 Configure miss: union bpf_attr.btf_vmlinux_value_type_id
 Configure miss: union bpf_attr.dummy
+Configure miss: union bpf_attr.link_create.attach_type
+Configure miss: union bpf_attr.link_create.flags
+Configure miss: union bpf_attr.link_create.prog_fd
+Configure miss: union bpf_attr.link_create.target_fd
+Configure miss: union bpf_attr.link_update.flags
+Configure miss: union bpf_attr.link_update.link_fd
+Configure miss: union bpf_attr.link_update.new_prog_fd
+Configure miss: union bpf_attr.link_update.old_prog_fd
 Configure miss: union bpf_attr.replace_bpf_fd
 Configure miss: struct io_uring_params.wq_fd
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
 Configure miss: bluetooth/bluetooth.h
-Configure miss: whether TCA_ACT_FLAGS is declared
-Configure miss: whether IFLA_PROP_LIST is declared
-Configure miss: whether IFLA_ALT_IFNAME is declared
-Configure miss: whether IFLA_PERM_ADDRESS is declared
-Configure miss: whether TCA_STATS_PKT64 is declared
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
 Configure miss: struct __aio_sigset
-Configure miss: struct clone_args.set_tid_size
-Configure miss: whether BTRFS_COMPRESS_NONE is declared
-Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
-Configure miss: whether BTRFS_COMPRESS_LZO is declared
+Configure miss: struct clone_args.cgroup
 Configure miss: struct io_uring_files_update
 Configure miss: struct io_uring_probe_op
 Configure miss: struct io_uring_probe
 Configure miss: struct v4l2_area
-Configure miss: whether P_PPID is declared
-Configure miss: whether P_SID is declared
-Configure miss: whether P_CID is declared
-Configure miss: whether P_UID is declared
-Configure miss: whether P_GID is declared
-Configure miss: whether P_LWPID is declared
+Configure miss: whether BTRFS_COMPRESS_NONE is declared
+Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
+Configure miss: whether BTRFS_COMPRESS_LZO is declared
+Configure miss: whether BTRFS_COMPRESS_ZSTD is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
+Configure miss: whether IFLA_XDP_EXPECTED_FD is declared
+Configure miss: whether IFLA_PROP_LIST is declared
+Configure miss: whether IFLA_ALT_IFNAME is declared
+Configure miss: whether IFLA_PERM_ADDRESS is declared
+Configure miss: whether TCA_ACT_FLAGS is declared
+Configure miss: whether TCA_ACT_HW_STATS is declared
+Configure miss: whether TCA_ACT_USED_HW_STATS is declared
+Configure miss: whether TCA_STATS_PKT64 is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
 Configure miss: whether V4L2_CTRL_TYPE_AREA is declared
+Configure miss: whether P_PIDFD is declared
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: demangle.h usability
 Configure miss: demangle.h presence
