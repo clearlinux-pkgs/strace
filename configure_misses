@@ -52,6 +52,7 @@ Configure miss: union bpf_attr.link_update.link_fd
 Configure miss: union bpf_attr.link_update.new_prog_fd
 Configure miss: union bpf_attr.link_update.old_prog_fd
 Configure miss: union bpf_attr.replace_bpf_fd
+Configure miss: struct io_cqring_offsets.flags
 Configure miss: struct io_uring_params.wq_fd
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
@@ -64,6 +65,7 @@ Configure miss: struct clone_args.cgroup
 Configure miss: struct io_uring_files_update
 Configure miss: struct io_uring_probe_op
 Configure miss: struct io_uring_probe
+Configure miss: struct loop_config
 Configure miss: struct v4l2_area
 Configure miss: whether BTRFS_COMPRESS_NONE is declared
 Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
