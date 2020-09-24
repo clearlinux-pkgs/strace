@@ -28,6 +28,7 @@ Configure miss: netinet/sctp.h
 Configure miss: ustat.h usability
 Configure miss: ustat.h presence
 Configure miss: ustat.h
+Configure miss: linux/close_range.h
 Configure miss: linux/openat2.h
 Configure miss: asm/sigcontext.h
 Configure miss: struct bpf_map_info.btf_vmlinux_value_type_id
@@ -71,11 +72,13 @@ Configure miss: whether BTRFS_COMPRESS_NONE is declared
 Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
 Configure miss: whether BTRFS_COMPRESS_LZO is declared
 Configure miss: whether BTRFS_COMPRESS_ZSTD is declared
+Configure miss: whether CLOSE_RANGE_UNSHARE is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
 Configure miss: whether IFLA_XDP_EXPECTED_FD is declared
 Configure miss: whether IFLA_PROP_LIST is declared
 Configure miss: whether IFLA_ALT_IFNAME is declared
 Configure miss: whether IFLA_PERM_ADDRESS is declared
+Configure miss: whether IFLA_PROTO_DOWN_REASON is declared
 Configure miss: whether TCA_ACT_FLAGS is declared
 Configure miss: whether TCA_ACT_HW_STATS is declared
 Configure miss: whether TCA_ACT_USED_HW_STATS is declared
