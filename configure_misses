@@ -1,5 +1,6 @@
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Winitializer-overrides
+Configure miss: whether gcc is broken
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: be64toh
@@ -84,6 +85,35 @@ Configure miss: whether TCA_ACT_HW_STATS is declared
 Configure miss: whether TCA_ACT_USED_HW_STATS is declared
 Configure miss: whether TCA_STATS_PKT64 is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
+Configure miss: whether IORING_OP_TIMEOUT_REMOVE is declared
+Configure miss: whether IORING_OP_ACCEPT is declared
+Configure miss: whether IORING_OP_ASYNC_CANCEL is declared
+Configure miss: whether IORING_OP_LINK_TIMEOUT is declared
+Configure miss: whether IORING_OP_CONNECT is declared
+Configure miss: whether IORING_OP_FALLOCATE is declared
+Configure miss: whether IORING_OP_OPENAT is declared
+Configure miss: whether IORING_OP_CLOSE is declared
+Configure miss: whether IORING_OP_FILES_UPDATE is declared
+Configure miss: whether IORING_OP_STATX is declared
+Configure miss: whether IORING_OP_READ is declared
+Configure miss: whether IORING_OP_WRITE is declared
+Configure miss: whether IORING_OP_FADVISE is declared
+Configure miss: whether IORING_OP_MADVISE is declared
+Configure miss: whether IORING_OP_SEND is declared
+Configure miss: whether IORING_OP_RECV is declared
+Configure miss: whether IORING_OP_OPENAT2 is declared
+Configure miss: whether IORING_OP_EPOLL_CTL is declared
+Configure miss: whether IORING_OP_SPLICE is declared
+Configure miss: whether IORING_OP_PROVIDE_BUFFERS is declared
+Configure miss: whether IORING_OP_REMOVE_BUFFERS is declared
+Configure miss: whether IORING_OP_TEE is declared
+Configure miss: whether IORING_REGISTER_FILES_UPDATE is declared
+Configure miss: whether IORING_REGISTER_EVENTFD_ASYNC is declared
+Configure miss: whether IORING_REGISTER_PROBE is declared
+Configure miss: whether IORING_REGISTER_PERSONALITY is declared
+Configure miss: whether IORING_UNREGISTER_PERSONALITY is declared
+Configure miss: whether IORING_REGISTER_RESTRICTIONS is declared
+Configure miss: whether IORING_REGISTER_ENABLE_RINGS is declared
 Configure miss: whether V4L2_CTRL_TYPE_AREA is declared
 Configure miss: whether P_PIDFD is declared
 Configure miss: x86_64-generic-linux-gnu-readelf

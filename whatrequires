@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 Linux-PAM
-compat-ldc-soname90
 filesystem
 mingw-crt
 mingw-gcc
