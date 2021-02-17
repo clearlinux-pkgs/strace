@@ -13,7 +13,6 @@ Configure miss: s390_compat_regs
 Configure miss: struct __kernel_flock
 Configure miss: struct __kernel_flock64
 Configure miss: struct __kernel_f_owner_ex
-Configure miss: struct perf_event_attr.aux_sample_size
 Configure miss: asm/cachectl.h usability
 Configure miss: asm/cachectl.h presence
 Configure miss: asm/cachectl.h
@@ -29,33 +28,8 @@ Configure miss: netinet/sctp.h
 Configure miss: ustat.h usability
 Configure miss: ustat.h presence
 Configure miss: ustat.h
-Configure miss: linux/close_range.h
-Configure miss: linux/openat2.h
 Configure miss: asm/sigcontext.h
-Configure miss: struct bpf_map_info.btf_vmlinux_value_type_id
-Configure miss: union bpf_attr.attach_btf_id
-Configure miss: union bpf_attr.attach_prog_fd
-Configure miss: union bpf_attr.batch.count
-Configure miss: union bpf_attr.batch.elem_flags
-Configure miss: union bpf_attr.batch.flags
-Configure miss: union bpf_attr.batch.in_batch
-Configure miss: union bpf_attr.batch.keys
-Configure miss: union bpf_attr.batch.map_fd
-Configure miss: union bpf_attr.batch.out_batch
-Configure miss: union bpf_attr.batch.values
-Configure miss: union bpf_attr.btf_vmlinux_value_type_id
 Configure miss: union bpf_attr.dummy
-Configure miss: union bpf_attr.link_create.attach_type
-Configure miss: union bpf_attr.link_create.flags
-Configure miss: union bpf_attr.link_create.prog_fd
-Configure miss: union bpf_attr.link_create.target_fd
-Configure miss: union bpf_attr.link_update.flags
-Configure miss: union bpf_attr.link_update.link_fd
-Configure miss: union bpf_attr.link_update.new_prog_fd
-Configure miss: union bpf_attr.link_update.old_prog_fd
-Configure miss: union bpf_attr.replace_bpf_fd
-Configure miss: struct io_cqring_offsets.flags
-Configure miss: struct io_uring_params.wq_fd
 Configure miss: bluetooth/bluetooth.h usability
 Configure miss: bluetooth/bluetooth.h presence
 Configure miss: bluetooth/bluetooth.h
@@ -63,58 +37,8 @@ Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
 Configure miss: struct __aio_sigset
-Configure miss: struct clone_args.cgroup
-Configure miss: struct io_uring_files_update
-Configure miss: struct io_uring_probe_op
-Configure miss: struct io_uring_probe
-Configure miss: struct loop_config
-Configure miss: struct v4l2_area
-Configure miss: whether BTRFS_COMPRESS_NONE is declared
-Configure miss: whether BTRFS_COMPRESS_ZLIB is declared
-Configure miss: whether BTRFS_COMPRESS_LZO is declared
-Configure miss: whether BTRFS_COMPRESS_ZSTD is declared
-Configure miss: whether CLOSE_RANGE_UNSHARE is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
-Configure miss: whether IFLA_XDP_EXPECTED_FD is declared
-Configure miss: whether IFLA_PROP_LIST is declared
-Configure miss: whether IFLA_ALT_IFNAME is declared
-Configure miss: whether IFLA_PERM_ADDRESS is declared
-Configure miss: whether IFLA_PROTO_DOWN_REASON is declared
-Configure miss: whether TCA_ACT_FLAGS is declared
-Configure miss: whether TCA_ACT_HW_STATS is declared
-Configure miss: whether TCA_ACT_USED_HW_STATS is declared
-Configure miss: whether TCA_STATS_PKT64 is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
-Configure miss: whether IORING_OP_TIMEOUT_REMOVE is declared
-Configure miss: whether IORING_OP_ACCEPT is declared
-Configure miss: whether IORING_OP_ASYNC_CANCEL is declared
-Configure miss: whether IORING_OP_LINK_TIMEOUT is declared
-Configure miss: whether IORING_OP_CONNECT is declared
-Configure miss: whether IORING_OP_FALLOCATE is declared
-Configure miss: whether IORING_OP_OPENAT is declared
-Configure miss: whether IORING_OP_CLOSE is declared
-Configure miss: whether IORING_OP_FILES_UPDATE is declared
-Configure miss: whether IORING_OP_STATX is declared
-Configure miss: whether IORING_OP_READ is declared
-Configure miss: whether IORING_OP_WRITE is declared
-Configure miss: whether IORING_OP_FADVISE is declared
-Configure miss: whether IORING_OP_MADVISE is declared
-Configure miss: whether IORING_OP_SEND is declared
-Configure miss: whether IORING_OP_RECV is declared
-Configure miss: whether IORING_OP_OPENAT2 is declared
-Configure miss: whether IORING_OP_EPOLL_CTL is declared
-Configure miss: whether IORING_OP_SPLICE is declared
-Configure miss: whether IORING_OP_PROVIDE_BUFFERS is declared
-Configure miss: whether IORING_OP_REMOVE_BUFFERS is declared
-Configure miss: whether IORING_OP_TEE is declared
-Configure miss: whether IORING_REGISTER_FILES_UPDATE is declared
-Configure miss: whether IORING_REGISTER_EVENTFD_ASYNC is declared
-Configure miss: whether IORING_REGISTER_PROBE is declared
-Configure miss: whether IORING_REGISTER_PERSONALITY is declared
-Configure miss: whether IORING_UNREGISTER_PERSONALITY is declared
-Configure miss: whether IORING_REGISTER_RESTRICTIONS is declared
-Configure miss: whether IORING_REGISTER_ENABLE_RINGS is declared
-Configure miss: whether V4L2_CTRL_TYPE_AREA is declared
 Configure miss: whether P_PIDFD is declared
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: demangle.h usability
@@ -124,10 +48,5 @@ Configure miss: libiberty/demangle.h usability
 Configure miss: libiberty/demangle.h presence
 Configure miss: libiberty/demangle.h
 Configure miss: whether to enable symbols demangling in stack trace
-Configure miss: m32 personality runtime support
-Configure miss: gnu/stubs-x32.h usability
-Configure miss: gnu/stubs-x32.h presence
-Configure miss: gnu/stubs-x32.h
-Configure miss: mx32 personality runtime support
-Configure miss: struct stat64
-Configure miss: struct stat64.st_mtime_nsec
+Configure miss: whether to enable m32 personality support
+Configure miss: whether to enable mx32 personality support

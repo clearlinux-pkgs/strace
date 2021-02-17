@@ -1,3 +1,30 @@
+Noteworthy changes in release 5.11 (2021-02-17)
+===============================================
+
+* Improvements
+  * Implemented poke injection (--inject=SET:poke_enter= and
+    --inject=SET:poke_exit= options).
+  * Implemented decoding of epoll_pwait2 syscall introduced in Linux 5.11.
+  * Implemented decoding of GPIO_* ioctl commands.
+  * Implemented decoding of FS_IOC_FS[GS]ETXATTR, FS_IOC_[GS]ETFLAGS,
+    and FS_IOC32_[GS]ETFLAGS ioctl commands.
+  * Implemented decoding of SIOCADDMULTI, SIOCDELMULTI, SIOCGIFENCAP,
+    SIOCOUTQNSD, SIOCSIFENCAP, and SIOCSIFHWBROADCAST ioctl commands.
+  * Implemented decoding of UBI_IOCRPEB and UBI_IOCSPEB ioctl commands.
+  * Implemented decoding of V4L2_BUF_TYPE_META_CAPTURE,
+    V4L2_BUF_TYPE_META_OUTPUT, and VIDIOC_QUERY_EXT_CTRL ioctl commands.
+  * Updated lists of BPF_*, BTRFS_*, CLOSE_RANGE_*, ETH_*, IORING_*, KVM_*,
+    PR_*, PTRACE_*, RTA_*, RTAX_*, RTM_*, RTNH_*, SCTP_*, SO_*, SYS_*, UFFD_*,
+    and V4L2_* constants.
+  * Updated lists of ioctl commands from Linux 5.11.
+
+* Bug fixes
+  * Fixed decoding of SIOCGIFINDEX, SIOCBRADDIF, and SIOCBRDELIF ioctl commands.
+  * Fixed decoding of FIO[GS]ETOWN, SIOC[GS]PGRP, and SIOCATMARK ioctl commands
+    on alpha, mips, sh, and xtensa architectures.
+  * Fixed fork--pidns-translation test on sparc and sparc64.
+  * Fixed build on hppa with uapi headers from Linux >= 5.10.
+
 Noteworthy changes in release 5.10 (2020-12-14)
 ===============================================
 

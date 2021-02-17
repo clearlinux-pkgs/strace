@@ -1,1 +1,2 @@
 --with-libunwind
+--enable-mpers=no

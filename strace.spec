@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 5.10
-Release  : 47
-URL      : https://github.com/strace/strace/releases/download/v5.10/strace-5.10.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v5.10/strace-5.10.tar.xz
-Source1  : https://github.com/strace/strace/releases/download/v5.10/strace-5.10.tar.xz.asc
+Version  : 5.11
+Release  : 48
+URL      : https://github.com/strace/strace/releases/download/v5.11/strace-5.11.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v5.11/strace-5.11.tar.xz
+Source1  : https://github.com/strace/strace/releases/download/v5.11/strace-5.11.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
@@ -64,15 +64,15 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-5.10
-cd %{_builddir}/strace-5.10
+%setup -q -n strace-5.11
+cd %{_builddir}/strace-5.11
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1608096975
+export SOURCE_DATE_EPOCH=1613591424
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -81,18 +81,20 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-%configure --disable-static --with-libunwind
+%configure --disable-static --with-libunwind \
+--enable-mpers=no
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1608096975
+export SOURCE_DATE_EPOCH=1613591424
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
-cp %{_builddir}/strace-5.10/COPYING %{buildroot}/usr/share/package-licenses/strace/4dfefcdcb9bea47afec0beffdc221902494e8607
-cp %{_builddir}/strace-5.10/debian/copyright %{buildroot}/usr/share/package-licenses/strace/a0d1b06ef14d61d7fad64266c547e0095e6e81de
-cp %{_builddir}/strace-5.10/tests-m32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
-cp %{_builddir}/strace-5.10/tests-mx32/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
-cp %{_builddir}/strace-5.10/tests/COPYING %{buildroot}/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
+cp %{_builddir}/strace-5.11/COPYING %{buildroot}/usr/share/package-licenses/strace/79d293e69927858a1e21fb78a1dfe8967566220d
+cp %{_builddir}/strace-5.11/bundled/linux/COPYING %{buildroot}/usr/share/package-licenses/strace/3f9f7be18936296d848182000ba3a63a240e0db1
+cp %{_builddir}/strace-5.11/debian/copyright %{buildroot}/usr/share/package-licenses/strace/6d88d1d50f13dba8cf1fd4a41e3d12d0a3ecb844
+cp %{_builddir}/strace-5.11/tests-m32/COPYING %{buildroot}/usr/share/package-licenses/strace/7015e06865d43f255b2fa4f8be035604fa60128e
+cp %{_builddir}/strace-5.11/tests-mx32/COPYING %{buildroot}/usr/share/package-licenses/strace/7015e06865d43f255b2fa4f8be035604fa60128e
+cp %{_builddir}/strace-5.11/tests/COPYING %{buildroot}/usr/share/package-licenses/strace/7015e06865d43f255b2fa4f8be035604fa60128e
 %make_install
 
 %files
@@ -104,14 +106,14 @@ cp %{_builddir}/strace-5.10/tests/COPYING %{buildroot}/usr/share/package-license
 
 %files extras
 %defattr(-,root,root,-)
-/usr/bin/strace-graph
 /usr/bin/strace-log-merge
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/strace/2d3279d68ec001bd854a8ecb85bd91e92f1ba017
-/usr/share/package-licenses/strace/4dfefcdcb9bea47afec0beffdc221902494e8607
-/usr/share/package-licenses/strace/a0d1b06ef14d61d7fad64266c547e0095e6e81de
+/usr/share/package-licenses/strace/3f9f7be18936296d848182000ba3a63a240e0db1
+/usr/share/package-licenses/strace/6d88d1d50f13dba8cf1fd4a41e3d12d0a3ecb844
+/usr/share/package-licenses/strace/7015e06865d43f255b2fa4f8be035604fa60128e
+/usr/share/package-licenses/strace/79d293e69927858a1e21fb78a1dfe8967566220d
 
 %files man
 %defattr(0644,root,root,0755)
