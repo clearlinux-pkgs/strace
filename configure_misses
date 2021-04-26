@@ -1,52 +1,53 @@
-Configure miss: whether gcc handles -Werror -Wunknown-warning-option
-Configure miss: whether gcc handles -Winitializer-overrides
-Configure miss: whether gcc is broken
-Configure miss: whether gcc handles -Werror -Wunknown-warning-option
-Configure miss: whether gcc handles -Winitializer-overrides
+Configure miss: asm/cachectl.h
+Configure miss: asm/cachectl.h presence
+Configure miss: asm/cachectl.h usability
+Configure miss: asm/guarded_storage.h
+Configure miss: asm/guarded_storage.h presence
+Configure miss: asm/guarded_storage.h usability
+Configure miss: asm/sigcontext.h
+Configure miss: asm/sysmips.h
+Configure miss: asm/sysmips.h presence
+Configure miss: asm/sysmips.h usability
 Configure miss: be64toh
+Configure miss: bluetooth/bluetooth.h
+Configure miss: bluetooth/bluetooth.h presence
+Configure miss: bluetooth/bluetooth.h usability
+Configure miss: demangle.h
+Configure miss: demangle.h presence
+Configure miss: demangle.h usability
+Configure miss: libiberty/demangle.h
+Configure miss: libiberty/demangle.h presence
+Configure miss: libiberty/demangle.h usability
+Configure miss: netinet/sctp.h
+Configure miss: netinet/sctp.h presence
+Configure miss: netinet/sctp.h usability
+Configure miss: s390_compat_regs
+Configure miss: selinux/selinux.h
+Configure miss: selinux/selinux.h presence
+Configure miss: selinux/selinux.h usability
+Configure miss: struct __aio_sigset
+Configure miss: struct ia64_fpreg
+Configure miss: struct pt_all_user_regs
+Configure miss: struct ptrace_peeksiginfo_args
 Configure miss: struct stat64
 Configure miss: struct stat64.st_mtime_nsec
-Configure miss: struct pt_all_user_regs
-Configure miss: struct ia64_fpreg
-Configure miss: struct ptrace_peeksiginfo_args
-Configure miss: s390_compat_regs
-Configure miss: struct __kernel_flock
-Configure miss: struct __kernel_flock64
-Configure miss: struct __kernel_f_owner_ex
-Configure miss: asm/cachectl.h usability
-Configure miss: asm/cachectl.h presence
-Configure miss: asm/cachectl.h
-Configure miss: asm/guarded_storage.h usability
-Configure miss: asm/guarded_storage.h presence
-Configure miss: asm/guarded_storage.h
-Configure miss: asm/sysmips.h usability
-Configure miss: asm/sysmips.h presence
-Configure miss: asm/sysmips.h
-Configure miss: netinet/sctp.h usability
-Configure miss: netinet/sctp.h presence
-Configure miss: netinet/sctp.h
-Configure miss: ustat.h usability
-Configure miss: ustat.h presence
-Configure miss: ustat.h
-Configure miss: asm/sigcontext.h
-Configure miss: union bpf_attr.dummy
-Configure miss: bluetooth/bluetooth.h usability
-Configure miss: bluetooth/bluetooth.h presence
-Configure miss: bluetooth/bluetooth.h
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
+Configure miss: union bpf_attr.dummy
+Configure miss: ustat.h
+Configure miss: ustat.h presence
+Configure miss: ustat.h usability
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
-Configure miss: struct __aio_sigset
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
 Configure miss: whether P_PIDFD is declared
-Configure miss: x86_64-generic-linux-gnu-readelf
-Configure miss: demangle.h usability
-Configure miss: demangle.h presence
-Configure miss: demangle.h
-Configure miss: libiberty/demangle.h usability
-Configure miss: libiberty/demangle.h presence
-Configure miss: libiberty/demangle.h
-Configure miss: whether to enable symbols demangling in stack trace
+Configure miss: whether gcc handles -Werror -Wunknown-warning-option
+Configure miss: whether gcc handles -Werror -Wunknown-warning-option
+Configure miss: whether gcc handles -Winitializer-overrides
+Configure miss: whether gcc handles -Winitializer-overrides
+Configure miss: whether gcc is broken
 Configure miss: whether to enable m32 personality support
 Configure miss: whether to enable mx32 personality support
+Configure miss: whether to enable security contexts support
+Configure miss: whether to enable symbols demangling in stack trace
+Configure miss: x86_64-generic-linux-gnu-readelf
