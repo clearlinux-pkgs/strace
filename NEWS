@@ -1,3 +1,25 @@
+Noteworthy changes in release 5.13 (2021-07-18)
+===============================================
+
+* Improvements
+  * Print netlink data in a more structured way.
+  * Implemented decoding of NT_PRSTATUS and NT_FPREGSET regsets
+    of PTRACE_GETREGSET and PTRACE_SETREGSET requests.
+  * Implemented decoding of regs argument of PTRACE_GETREGS, PTRACE_GETREGS64,
+    PTRACE_SETREGS, PTRACE_SETREGS64, PTRACE_GETFPREGS, and PTRACE_SETFPREGS
+    requests.
+  * Implemented powerpc System Call Vectored ABI support.
+  * Implemented decoding of landlock_add_rule, landlock_create_ruleset,
+    and landlock_restrict_self syscalls introduced in Linux 5.13.
+  * Enhanced decoding of perf_event_open syscall.
+  * Updated lists of BPF_*, IORING_*, KEXEC_*, KEY_*, KVM_*, NT_*, PR_*,
+    PTRACE_*, RTM_*, RTPROT_*, TRAP_*, UFFD_*, UFFDIO_*, and V4L2_* constants.
+  * Updated lists of ioctl commands from Linux 5.13.
+
+* Portability
+  * On powerpc and powerpc64, linux kernel >= 2.6.23 is required.
+    Older versions without a decent PTRACE_GETREGS support will not work.
+
 Noteworthy changes in release 5.12 (2021-04-26)
 ===============================================
 
@@ -117,7 +139,7 @@ Noteworthy changes in release 5.7 (2020-06-01)
 * Improvements
   * Implemented interval specification in "when=" subexpression of syscall
     tampering expressions.
-  * Added -e trace=%clock option for tracing syscalls reading of modifying
+  * Added -e trace=%clock option for tracing syscalls reading or modifying
     system clocks.
   * Implemented decoding of BPF_LINK_CREATE and BPF_LINK_UPDATE bpf
     syscall commands.
