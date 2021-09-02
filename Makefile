@@ -1,5 +1,5 @@
 PKG_NAME := strace
-URL = https://github.com/strace/strace/releases/download/v5.13/strace-5.13.tar.xz
+URL = https://github.com/strace/strace/releases/download/v5.14/strace-5.14.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
