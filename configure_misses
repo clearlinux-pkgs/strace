@@ -18,6 +18,8 @@ Configure miss: demangle.h usability
 Configure miss: libiberty/demangle.h
 Configure miss: libiberty/demangle.h presence
 Configure miss: libiberty/demangle.h usability
+Configure miss: linux/nfc.h
+Configure miss: linux/nfc.h usability
 Configure miss: netinet/sctp.h
 Configure miss: netinet/sctp.h presence
 Configure miss: netinet/sctp.h usability
@@ -38,14 +40,44 @@ Configure miss: ustat.h
 Configure miss: ustat.h presence
 Configure miss: ustat.h usability
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
+Configure miss: whether CTL_APPLDATA is declared
+Configure miss: whether CTL_INOTIFY is declared
+Configure miss: whether IEEE802154_ADDR_LONG is declared
+Configure miss: whether IEEE802154_ADDR_NONE is declared
+Configure miss: whether IEEE802154_ADDR_SHORT is declared
+Configure miss: whether KERN_CAP_BSET is declared
+Configure miss: whether KERN_JAVA_APPLETVIEWER is declared
+Configure miss: whether KERN_JAVA_INTERPRETER is declared
+Configure miss: whether KERN_MAXFILE is declared
+Configure miss: whether KERN_MAXID is declared
+Configure miss: whether KERN_MAXINODE is declared
+Configure miss: whether KERN_NFSRADDRS is declared
+Configure miss: whether KERN_NFSRNAME is declared
+Configure miss: whether KERN_NRFILE is declared
+Configure miss: whether KERN_NRINODE is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
+Configure miss: whether NET_IPV4_CONF_ACCEPT_LOCAL is declared
+Configure miss: whether NET_IPV4_CONF_PROXY_ARP_PVLAN is declared
+Configure miss: whether NET_IPV4_CONF_SRC_VMARK is declared
+Configure miss: whether NET_TCP_BIC is declared
+Configure miss: whether NET_TCP_BIC_FAST_CONVERGENCE is declared
+Configure miss: whether NET_TCP_BIC_LOW_WINDOW is declared
+Configure miss: whether NET_TCP_VEGAS is declared
+Configure miss: whether NET_TCP_VEGAS_ALPHA is declared
+Configure miss: whether NET_TCP_VEGAS_BETA is declared
+Configure miss: whether NET_TCP_VEGAS_GAMMA is declared
+Configure miss: whether NET_TCP_WESTWOOD is declared
 Configure miss: whether P_PIDFD is declared
+Configure miss: whether VM_CMM_PAGES is declared
+Configure miss: whether VM_CMM_TIMED_PAGES is declared
+Configure miss: whether VM_CMM_TIMEOUT is declared
+Configure miss: whether XFRM_MSG_GETDEFAULT is declared
+Configure miss: whether XFRM_MSG_SETDEFAULT is declared
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: whether gcc handles -Winitializer-overrides
-Configure miss: whether gcc is broken
 Configure miss: whether sys_errlist is declared
 Configure miss: whether to enable m32 personality support
 Configure miss: whether to enable mx32 personality support
