@@ -28,10 +28,11 @@ Configure miss: s390_compat_regs
 Configure miss: selinux/selinux.h
 Configure miss: selinux/selinux.h presence
 Configure miss: selinux/selinux.h usability
+Configure miss: siginfo_t.si_perf_data
+Configure miss: siginfo_t.si_perf_flags
+Configure miss: siginfo_t.si_perf_type
 Configure miss: struct __aio_sigset
-Configure miss: struct bpf_map_info.map_extra
 Configure miss: struct bpf_map_info.pad
-Configure miss: struct bpf_prog_info.verified_insns
 Configure miss: struct ia64_fpreg
 Configure miss: struct pt_all_user_regs
 Configure miss: struct ptrace_peeksiginfo_args
@@ -39,16 +40,14 @@ Configure miss: struct stat64
 Configure miss: struct stat64.st_mtime_nsec
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
+Configure miss: struct tcp_diag_md5sig
 Configure miss: union bpf_attr.dummy
 Configure miss: union bpf_attr.link_create.addrs
 Configure miss: union bpf_attr.link_create.bpf_cookie
 Configure miss: union bpf_attr.link_create.cnt
 Configure miss: union bpf_attr.link_create.cookies
-Configure miss: union bpf_attr.link_create.kprobe_multi
 Configure miss: union bpf_attr.link_create.syms
-Configure miss: union bpf_attr.map_extra
 Configure miss: union bpf_attr.pad
-Configure miss: union bpf_attr.test.batch_size
 Configure miss: ustat.h
 Configure miss: ustat.h presence
 Configure miss: ustat.h usability
@@ -70,9 +69,6 @@ Configure miss: whether KERN_NRFILE is declared
 Configure miss: whether KERN_NRINODE is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
 Configure miss: whether NET_CORE_DESTROY_DELAY is declared
-Configure miss: whether NET_IPV4_CONF_ACCEPT_LOCAL is declared
-Configure miss: whether NET_IPV4_CONF_PROXY_ARP_PVLAN is declared
-Configure miss: whether NET_IPV4_CONF_SRC_VMARK is declared
 Configure miss: whether NET_TCP_BIC is declared
 Configure miss: whether NET_TCP_BIC_FAST_CONVERGENCE is declared
 Configure miss: whether NET_TCP_BIC_LOW_WINDOW is declared
@@ -81,8 +77,9 @@ Configure miss: whether NET_TCP_VEGAS_ALPHA is declared
 Configure miss: whether NET_TCP_VEGAS_BETA is declared
 Configure miss: whether NET_TCP_VEGAS_GAMMA is declared
 Configure miss: whether NET_TCP_WESTWOOD is declared
-Configure miss: whether P_PIDFD is declared
-Configure miss: whether TCA_ACT_IN_HW_COUNT is declared
+Configure miss: whether NFEA_ACTIVITY_NOTIFY is declared
+Configure miss: whether NFEA_DONT_REFRESH is declared
+Configure miss: whether NFEA_UNSPEC is declared
 Configure miss: whether VM_CMM_PAGES is declared
 Configure miss: whether VM_CMM_TIMED_PAGES is declared
 Configure miss: whether VM_CMM_TIMEOUT is declared
