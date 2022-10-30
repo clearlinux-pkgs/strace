@@ -1,3 +1,13 @@
+Noteworthy changes in release 6.0 (2022-10-29)
+==============================================
+
+* Improvements
+  * Enhanced decoding of PTP_* ioctl commands.
+  * Updated decoding of setns syscall.
+  * Updated lists of BPF_*, BTRFS_*, FAN_*, ETH_P_*, KVM_*, NDTPA_*,
+    NT_*, PERF_*, and TLS_INFO_* constants.
+  * Updated lists of ioctl commands from Linux 6.0.
+
 Noteworthy changes in release 5.19 (2022-08-12)
 ===============================================
 
@@ -23,8 +33,6 @@ Noteworthy changes in release 5.19 (2022-08-12)
     KEXEC_*, LANDLOCK_*, NET_IPV4_CONF_*, NLM_F_*, NT_*, PR_*, SECCOMP_*,
     UFFD_FEATURE_*, V4L2_CID_*, and V4L2_PIX_FMT_* constants.
   * Updated lists of ioctl commands from Linux 5.19.
-
-* Bug fixes
 
 Noteworthy changes in release 5.18 (2022-06-18)
 ===============================================

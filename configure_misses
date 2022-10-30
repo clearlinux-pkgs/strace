@@ -80,6 +80,10 @@ Configure miss: whether NET_TCP_WESTWOOD is declared
 Configure miss: whether NFEA_ACTIVITY_NOTIFY is declared
 Configure miss: whether NFEA_DONT_REFRESH is declared
 Configure miss: whether NFEA_UNSPEC is declared
+Configure miss: whether PTP_PF_EXTTS is declared
+Configure miss: whether PTP_PF_NONE is declared
+Configure miss: whether PTP_PF_PEROUT is declared
+Configure miss: whether PTP_PF_PHYSYNC is declared
 Configure miss: whether VM_CMM_PAGES is declared
 Configure miss: whether VM_CMM_TIMED_PAGES is declared
 Configure miss: whether VM_CMM_TIMEOUT is declared
