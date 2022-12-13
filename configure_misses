@@ -41,6 +41,8 @@ Configure miss: struct stat64.st_mtime_nsec
 Configure miss: struct statfs.f_fsid.__val
 Configure miss: struct statfs64.f_fsid.__val
 Configure miss: struct tcp_diag_md5sig
+Configure miss: struct termios.c_ispeed
+Configure miss: struct termios.c_ospeed
 Configure miss: union bpf_attr.dummy
 Configure miss: union bpf_attr.link_create.addrs
 Configure miss: union bpf_attr.link_create.bpf_cookie
@@ -52,31 +54,10 @@ Configure miss: ustat.h
 Configure miss: ustat.h presence
 Configure miss: ustat.h usability
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
-Configure miss: whether CTL_APPLDATA is declared
-Configure miss: whether CTL_INOTIFY is declared
 Configure miss: whether IEEE802154_ADDR_LONG is declared
 Configure miss: whether IEEE802154_ADDR_NONE is declared
 Configure miss: whether IEEE802154_ADDR_SHORT is declared
-Configure miss: whether KERN_CAP_BSET is declared
-Configure miss: whether KERN_JAVA_APPLETVIEWER is declared
-Configure miss: whether KERN_JAVA_INTERPRETER is declared
-Configure miss: whether KERN_MAXFILE is declared
-Configure miss: whether KERN_MAXID is declared
-Configure miss: whether KERN_MAXINODE is declared
-Configure miss: whether KERN_NFSRADDRS is declared
-Configure miss: whether KERN_NFSRNAME is declared
-Configure miss: whether KERN_NRFILE is declared
-Configure miss: whether KERN_NRINODE is declared
 Configure miss: whether LO_FLAGS_USE_AOPS is declared
-Configure miss: whether NET_CORE_DESTROY_DELAY is declared
-Configure miss: whether NET_TCP_BIC is declared
-Configure miss: whether NET_TCP_BIC_FAST_CONVERGENCE is declared
-Configure miss: whether NET_TCP_BIC_LOW_WINDOW is declared
-Configure miss: whether NET_TCP_VEGAS is declared
-Configure miss: whether NET_TCP_VEGAS_ALPHA is declared
-Configure miss: whether NET_TCP_VEGAS_BETA is declared
-Configure miss: whether NET_TCP_VEGAS_GAMMA is declared
-Configure miss: whether NET_TCP_WESTWOOD is declared
 Configure miss: whether NFEA_ACTIVITY_NOTIFY is declared
 Configure miss: whether NFEA_DONT_REFRESH is declared
 Configure miss: whether NFEA_UNSPEC is declared
@@ -84,9 +65,6 @@ Configure miss: whether PTP_PF_EXTTS is declared
 Configure miss: whether PTP_PF_NONE is declared
 Configure miss: whether PTP_PF_PEROUT is declared
 Configure miss: whether PTP_PF_PHYSYNC is declared
-Configure miss: whether VM_CMM_PAGES is declared
-Configure miss: whether VM_CMM_TIMED_PAGES is declared
-Configure miss: whether VM_CMM_TIMEOUT is declared
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Werror -Wunknown-warning-option
 Configure miss: whether gcc handles -Winitializer-overrides

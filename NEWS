@@ -1,3 +1,16 @@
+Noteworthy changes in release 6.1 (2022-12-12)
+==============================================
+
+* Improvements
+  * Enhanced decoding of terminal ioctl commands.
+  * Updated decoding of statx syscall.
+  * Updated lists of ABS_*, BPF_*, BTRFS_*, COUNTER_*, ETH_P_*, IFLA_*,
+    KVM_*, MADV_*, NLMSGERR_*, PERF_*, STATX_*, and TLS_* constants.
+  * Updated lists of ioctl commands from Linux 6.1.
+
+* Bug fixes
+  * Fixed injection tests on ia64.
+
 Noteworthy changes in release 6.0 (2022-10-29)
 ==============================================
 
