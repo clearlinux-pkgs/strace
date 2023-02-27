@@ -31,6 +31,7 @@ Configure miss: selinux/selinux.h usability
 Configure miss: siginfo_t.si_perf_data
 Configure miss: siginfo_t.si_perf_flags
 Configure miss: siginfo_t.si_perf_type
+Configure miss: siginfo_t.si_trapno
 Configure miss: struct __aio_sigset
 Configure miss: struct bpf_map_info.pad
 Configure miss: struct ia64_fpreg

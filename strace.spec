@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 6.1
-Release  : 58
-URL      : https://github.com/strace/strace/releases/download/v6.1/strace-6.1.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v6.1/strace-6.1.tar.xz
-Source1  : https://github.com/strace/strace/releases/download/v6.1/strace-6.1.tar.xz.asc
+Version  : 6.2
+Release  : 59
+URL      : https://github.com/strace/strace/releases/download/v6.2/strace-6.2.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v6.2/strace-6.2.tar.xz
+Source1  : https://github.com/strace/strace/releases/download/v6.2/strace-6.2.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
@@ -19,6 +19,9 @@ Requires: strace-man = %{version}-%{release}
 BuildRequires : btrfs-progs-dev
 BuildRequires : libunwind-dev
 BuildRequires : valgrind
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 The strace program intercepts and records the system calls called and
@@ -64,29 +67,29 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-6.1
-cd %{_builddir}/strace-6.1
+%setup -q -n strace-6.2
+cd %{_builddir}/strace-6.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1670894829
+export SOURCE_DATE_EPOCH=1677519128
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 %configure --disable-static --with-libunwind \
 --enable-mpers=no
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1670894829
+export SOURCE_DATE_EPOCH=1677519128
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
 cp %{_builddir}/strace-%{version}/COPYING %{buildroot}/usr/share/package-licenses/strace/5e5aac2444f406ba1f796ceff6887fc3b1def247 || :
