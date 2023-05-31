@@ -7,7 +7,7 @@
 #
 Name     : strace
 Version  : 6.3
-Release  : 60
+Release  : 61
 URL      : https://github.com/strace/strace/releases/download/v6.3/strace-6.3.tar.xz
 Source0  : https://github.com/strace/strace/releases/download/v6.3/strace-6.3.tar.xz
 Source1  : https://github.com/strace/strace/releases/download/v6.3/strace-6.3.tar.xz.asc
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683590720
+export SOURCE_DATE_EPOCH=1685502753
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -105,7 +105,7 @@ export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3"
 make  %{?_smp_mflags}
 popd
 %install
-export SOURCE_DATE_EPOCH=1683590720
+export SOURCE_DATE_EPOCH=1685502753
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
 cp %{_builddir}/strace-%{version}/COPYING %{buildroot}/usr/share/package-licenses/strace/5e5aac2444f406ba1f796ceff6887fc3b1def247 || :
