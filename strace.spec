@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xA8041FA839E16E36 (ldv@altlinux.org)
 #
 Name     : strace
-Version  : 6.3
-Release  : 61
-URL      : https://github.com/strace/strace/releases/download/v6.3/strace-6.3.tar.xz
-Source0  : https://github.com/strace/strace/releases/download/v6.3/strace-6.3.tar.xz
-Source1  : https://github.com/strace/strace/releases/download/v6.3/strace-6.3.tar.xz.asc
+Version  : 6.4
+Release  : 62
+URL      : https://github.com/strace/strace/releases/download/v6.4/strace-6.4.tar.xz
+Source0  : https://github.com/strace/strace/releases/download/v6.4/strace-6.4.tar.xz
+Source1  : https://github.com/strace/strace/releases/download/v6.4/strace-6.4.tar.xz.asc
 Summary  : Tracks and displays system calls associated with a running process
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+
@@ -69,10 +69,10 @@ man components for the strace package.
 
 
 %prep
-%setup -q -n strace-6.3
-cd %{_builddir}/strace-6.3
+%setup -q -n strace-6.4
+cd %{_builddir}/strace-6.4
 pushd ..
-cp -a strace-6.3 buildavx2
+cp -a strace-6.4 buildavx2
 popd
 
 %build
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685502753
+export SOURCE_DATE_EPOCH=1687890592
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -105,7 +105,7 @@ export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3"
 make  %{?_smp_mflags}
 popd
 %install
-export SOURCE_DATE_EPOCH=1685502753
+export SOURCE_DATE_EPOCH=1687890592
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/strace
 cp %{_builddir}/strace-%{version}/COPYING %{buildroot}/usr/share/package-licenses/strace/5e5aac2444f406ba1f796ceff6887fc3b1def247 || :
