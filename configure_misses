@@ -1,63 +1,29 @@
 Configure miss: asm/cachectl.h
 Configure miss: asm/cachectl.h
-Configure miss: asm/cachectl.h presence
-Configure miss: asm/cachectl.h presence
-Configure miss: asm/cachectl.h usability
-Configure miss: asm/cachectl.h usability
 Configure miss: asm/guarded_storage.h
 Configure miss: asm/guarded_storage.h
-Configure miss: asm/guarded_storage.h presence
-Configure miss: asm/guarded_storage.h presence
-Configure miss: asm/guarded_storage.h usability
-Configure miss: asm/guarded_storage.h usability
 Configure miss: asm/sigcontext.h
 Configure miss: asm/sigcontext.h
 Configure miss: asm/sysmips.h
 Configure miss: asm/sysmips.h
-Configure miss: asm/sysmips.h presence
-Configure miss: asm/sysmips.h presence
-Configure miss: asm/sysmips.h usability
-Configure miss: asm/sysmips.h usability
 Configure miss: be64toh
 Configure miss: be64toh
 Configure miss: bluetooth/bluetooth.h
 Configure miss: bluetooth/bluetooth.h
-Configure miss: bluetooth/bluetooth.h presence
-Configure miss: bluetooth/bluetooth.h presence
-Configure miss: bluetooth/bluetooth.h usability
-Configure miss: bluetooth/bluetooth.h usability
 Configure miss: demangle.h
 Configure miss: demangle.h
-Configure miss: demangle.h presence
-Configure miss: demangle.h presence
-Configure miss: demangle.h usability
-Configure miss: demangle.h usability
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: libiberty/demangle.h
 Configure miss: libiberty/demangle.h
-Configure miss: libiberty/demangle.h presence
-Configure miss: libiberty/demangle.h presence
-Configure miss: libiberty/demangle.h usability
-Configure miss: libiberty/demangle.h usability
 Configure miss: linux/ipx.h
 Configure miss: linux/ipx.h
-Configure miss: linux/ipx.h presence
-Configure miss: linux/ipx.h presence
-Configure miss: linux/ipx.h usability
-Configure miss: linux/ipx.h usability
 Configure miss: netinet/sctp.h
 Configure miss: netinet/sctp.h
-Configure miss: netinet/sctp.h presence
-Configure miss: netinet/sctp.h presence
-Configure miss: netinet/sctp.h usability
-Configure miss: netinet/sctp.h usability
 Configure miss: s390_compat_regs
 Configure miss: s390_compat_regs
 Configure miss: selinux/selinux.h
 Configure miss: selinux/selinux.h
-Configure miss: selinux/selinux.h presence
-Configure miss: selinux/selinux.h presence
-Configure miss: selinux/selinux.h usability
-Configure miss: selinux/selinux.h usability
 Configure miss: siginfo_t.si_perf_data
 Configure miss: siginfo_t.si_perf_data
 Configure miss: siginfo_t.si_perf_flags
@@ -104,12 +70,10 @@ Configure miss: union bpf_attr.link_create.syms
 Configure miss: union bpf_attr.link_create.syms
 Configure miss: union bpf_attr.pad
 Configure miss: union bpf_attr.pad
+Configure miss: union bpf_attr.path_fd
+Configure miss: union bpf_attr.path_fd
 Configure miss: ustat.h
 Configure miss: ustat.h
-Configure miss: ustat.h presence
-Configure miss: ustat.h presence
-Configure miss: ustat.h usability
-Configure miss: ustat.h usability
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
 Configure miss: whether IEEE802154_ADDR_LONG is declared
