@@ -3,3 +3,4 @@ Linux-PAM
 filesystem
 mingw-crt
 mingw-gcc
+nettle

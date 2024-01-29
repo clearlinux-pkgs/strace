@@ -70,8 +70,6 @@ Configure miss: union bpf_attr.link_create.syms
 Configure miss: union bpf_attr.link_create.syms
 Configure miss: union bpf_attr.pad
 Configure miss: union bpf_attr.pad
-Configure miss: union bpf_attr.path_fd
-Configure miss: union bpf_attr.path_fd
 Configure miss: ustat.h
 Configure miss: ustat.h
 Configure miss: whether <linux/signal.h> can be used along with <signal.h>
@@ -106,6 +104,8 @@ Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: whether gcc handles -Winitializer-overrides
 Configure miss: whether gcc handles -Winitializer-overrides
+Configure miss: whether gcc handles -gdwarf-aranges
+Configure miss: whether gcc handles -gdwarf-aranges
 Configure miss: whether sys_errlist is declared
 Configure miss: whether sys_errlist is declared
 Configure miss: whether to enable m32 personality support
