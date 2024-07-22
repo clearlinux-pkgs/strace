@@ -70,6 +70,10 @@ Configure miss: union bpf_attr.link_create.syms
 Configure miss: union bpf_attr.link_create.syms
 Configure miss: union bpf_attr.pad
 Configure miss: union bpf_attr.pad
+Configure miss: union bpf_attr.raw_tracepoint.cookie
+Configure miss: union bpf_attr.raw_tracepoint.cookie
+Configure miss: union bpf_attr.raw_tracepoint.dummy
+Configure miss: union bpf_attr.raw_tracepoint.dummy
 Configure miss: union bpf_attr.token_create.bpffs_fd
 Configure miss: union bpf_attr.token_create.bpffs_fd
 Configure miss: union bpf_attr.token_create.flags
